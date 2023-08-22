@@ -1,0 +1,26 @@
+@import "variables";
+
+html * {
+    font-family: $text-font-family;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    &:hover {
+        color: $text-hover;
+    }
+}
