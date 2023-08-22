@@ -1,0 +1,29 @@
+{
+    "name": "cnir",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/main/server/index.js",
+    "author": "Jonas.Fournel",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/demo2b/cnir.git"
+    },
+    "scripts": {
+        "start": "npm run scss & node ./src/main/server/index.js",
+        "scss": "node-sass --include-path sass src/main/statics/styles/main.scss src/main/statics/styles/main.css"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.3",
+        "express": "^4.18.2",
+        "express-handlebars": "^7.1.2",
+        "glob": "^10.3.3",
+        "handlebars": "^4.7.8",
+        "handlebars-i18next": "^1.0.3",
+        "lit": "^2.8.0",
+        "lit-i18n": "^3.0.2",
+        "node-sass": "^9.0.0",
+        "npm-run-all": "^4.1.5",
+        "rollup": "^3.28.0"
+    }
+}
