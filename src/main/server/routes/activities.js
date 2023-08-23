@@ -3,5 +3,5 @@
  * @fileOverview
  */
 module.exports = function (request, response) {
-    response.render('news');
+    response.render('activities');
 };

@@ -12,9 +12,9 @@ header {
 
     nav {
         width: 100%;
-        background-color: $light-gray;
+        background-color: $light-blue;
         border: 1px solid #0000001a;
-        box-shadow: 0px -3px 5px 0px #00000005;
+        box-shadow: 0px -3px 5px 0px #00000047;
 
         > ul {
             width: fit-content;
@@ -79,6 +79,11 @@ div.main-content-wrapper {
                 grid-template-columns: 50% 50%;
             }
         }
+        .grid-container-3 {
+            @media screen and (min-width: 951px) {
+                grid-template-columns: 33% 33% 33%;
+            }
+        }
         .grid-container-4 {
             @media screen and (min-width: 951px) {
                 grid-template-columns: 25% 25% 25% 25%;
@@ -89,9 +94,10 @@ div.main-content-wrapper {
             padding: 1rem;
 
             h2,h3 {
-                background-color: #d0eeff;
+                background-color: $yellow;
                 padding: 0.5rem;
                 margin-bottom: 0;
+                border-radius: 8px 8px 0 0;
             }
 
             .swiper {
@@ -115,6 +121,7 @@ div.main-content-wrapper {
         .swiper {
             width: inherit;
             height: 40vh;
+            box-shadow: 0 2px 5px 0 #00000085;
 
             .swiper-slide {
                 text-align: center;

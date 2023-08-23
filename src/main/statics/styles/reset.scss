@@ -1,7 +1,9 @@
 @import "variables";
 
 html * {
-    font-family: $text-font-family;
+    font-family: $text-light;
+    color: white;
+    font-size: 1.4rem;
 }
 
 html,
@@ -10,7 +12,13 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    background-color: $regular-blue;
+
 }
+
+h1 { font-size: 4.4rem; letter-spacing: 0.1rem; font-family: $text-regular; }
+h2 { font-size: 3rem; letter-spacing: 0.1rem; font-family: $text-regular; }
+h3 { font-size: 2rem; letter-spacing: 0.1rem; font-family: $text-light; }
 
 li {
     list-style: none;

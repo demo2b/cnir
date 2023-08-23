@@ -1,21 +1,71 @@
+@font-face {
+  font-family: "Yanone Kaffeesatz Regular";
+  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Bold";
+  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Light";
+  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Thin";
+  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Regular";
+  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Bold";
+  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Light";
+  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Thin";
+  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
+
 html * {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: "Yanone Kaffeesatz Light";
+  color: white;
+  font-size: 1.4rem; }
 
 html,
 body {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  background-color: #2d69b5; }
+
+h1 {
+  font-size: 4.4rem;
+  letter-spacing: 0.1rem;
+  font-family: "Yanone Kaffeesatz Regular"; }
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  font-family: "Yanone Kaffeesatz Regular"; }
+
+h3 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: "Yanone Kaffeesatz Light"; }
 
 li {
   list-style: none; }
 
 a {
   text-decoration: none;
-  color: #000; }
+  color: #ffffff; }
   a:hover {
-    color: #188baf; }
+    color: #f5ae00; }
 
 header {
   display: flex;
@@ -26,9 +76,9 @@ header {
     text-align: center; }
   header nav {
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #45abe3;
     border: 1px solid #0000001a;
-    box-shadow: 0px -3px 5px 0px #00000005; }
+    box-shadow: 0px -3px 5px 0px #00000047; }
     header nav > ul {
       width: fit-content;
       margin-left: auto;
@@ -78,14 +128,18 @@ div.main-content-wrapper {
       div.main-content-wrapper div.main-content .grid-container-2 {
         grid-template-columns: 50% 50%; } }
     @media screen and (min-width: 951px) {
+      div.main-content-wrapper div.main-content .grid-container-3 {
+        grid-template-columns: 33% 33% 33%; } }
+    @media screen and (min-width: 951px) {
       div.main-content-wrapper div.main-content .grid-container-4 {
         grid-template-columns: 25% 25% 25% 25%; } }
     div.main-content-wrapper div.main-content .editorial-card {
       padding: 1rem; }
       div.main-content-wrapper div.main-content .editorial-card h2, div.main-content-wrapper div.main-content .editorial-card h3 {
-        background-color: #d0eeff;
+        background-color: #f5ae00;
         padding: 0.5rem;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        border-radius: 8px 8px 0 0; }
       div.main-content-wrapper div.main-content .editorial-card .swiper {
         height: 12rem; }
       div.main-content-wrapper div.main-content .editorial-card .list {
@@ -99,7 +153,8 @@ div.main-content-wrapper {
         object-fit: cover; }
     div.main-content-wrapper div.main-content .swiper {
       width: inherit;
-      height: 40vh; }
+      height: 40vh;
+      box-shadow: 0 2px 5px 0 #00000085; }
       div.main-content-wrapper div.main-content .swiper .swiper-slide {
         text-align: center;
         font-size: 18px;
