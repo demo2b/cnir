@@ -135,10 +135,10 @@ div.main-content-wrapper {
     @media screen and (min-width: 951px) {
       div.main-content-wrapper div.main-content .grid-container-2 {
         grid-template-columns: 50% 50%; } }
-    @media screen and (min-width: 951px) {
+    @media screen and (min-width: 1135px) {
       div.main-content-wrapper div.main-content .grid-container-3 {
         grid-template-columns: 50% 50%; } }
-    @media screen and (min-width: 1500px) {
+    @media screen and (min-width: 1750px) {
       div.main-content-wrapper div.main-content .grid-container-3 {
         grid-template-columns: 33% 33% 33%; } }
     @media screen and (min-width: 951px) {

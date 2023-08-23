@@ -11,10 +11,10 @@
 }
 
 .grid-container-3 {
-    @media screen and (min-width: 951px) {
+    @media screen and (min-width: 1135px) {
         grid-template-columns: 50% 50%;
     }
-    @media screen and (min-width: 1500px) {
+    @media screen and (min-width: 1750px) {
         grid-template-columns: 33% 33% 33%;
     }
 }
