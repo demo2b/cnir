@@ -1,50 +1,8 @@
 @import "variables";
-
 @import "reset";
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 { text-align: center; }
-
-    nav {
-        width: 100%;
-        background-color: $regular-blue;
-        border: 1px solid #0000001a;
-        box-shadow: 0px -3px 5px 0px #00000047;
-
-        > ul {
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            column-gap: 2rem;
-
-            a { color: white; }
-        }
-    }
-}
-
-footer {
-    width: 100%;
-    background-color: $regular-blue;
-    border: 1px solid #0000001a;
-    box-shadow: 0px -3px 5px 0px #00000014;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 10rem;
-
-    h2 { text-align: center; }
-    ul {
-        display: flex;
-        align-items: center;
-        column-gap: 2rem;
-    }
-}
+@import "navigations/header";
+@import "navigations/footer";
 
 div.main-content-wrapper {
     height: inherit;
@@ -69,53 +27,80 @@ div.main-content-wrapper {
             width: 80%;
             margin-top: 2rem;
             margin-bottom: 2rem;
-            border: 1px solid #0000002e
+            border: 1px solid #0000002e;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: 100%;
-            grid-auto-rows: 1fr;
-        }
-        .grid-container-2 {
-            @media screen and (min-width: 951px) {
-                grid-template-columns: 50% 50%;
-            }
-        }
-        .grid-container-3 {
-            @media screen and (min-width: 951px) {
-                grid-template-columns: 33% 33% 33%;
-            }
-        }
-        .grid-container-4 {
-            @media screen and (min-width: 951px) {
-                grid-template-columns: 25% 25% 25% 25%;
-            }
-        }
+        @import "grid";
 
         .editorial-card {
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
 
             hgroup {
                 background-color: $regular-blue;
-                color: white;
                 border-radius: 8px 8px 0 0;
                 padding: 0.5rem;
 
-                h2,h3 { margin: 0; line-height: 3.5rem;}
+                h2,h3 { margin: 0; line-height: 3.5rem; color: white; }
                 p { color: white; margin: 0 0 .3rem; }
             }
 
             .swiper {
                 height: 12rem;
+                width: 100%;
             }
 
             .list {
                 text-align: left;
                 margin: 0;
                 border: 1px solid $regular-blue;
+                display: flex;
+                flex-direction: column;
+                border-radius: 0 0 8px 8px;
+                flex: 2;
+                padding: 2rem 1rem 0 1rem;
 
-                li { list-style: circle; }
+                table {
+                    text-align: center;
+
+                    tbody {
+                        background-color: $regular-blue;
+                        color: white;
+
+                        &:before {
+                            content:"@";
+                            display:block;
+                            line-height:10px;
+                            text-indent:-99999px;
+                            background-color: white;
+                        }
+
+                        tr:last-child {
+                            background-color: $text-color;
+                        }
+                    }
+                }
+
+                ul {
+                    flex: 2;
+                    li { list-style: circle; }
+                }
+
+                button {
+                    width: 30%;
+                    margin: 2rem auto 2rem auto;
+                    background-color: $regular-blue;
+                    border: 1px solid grey;
+                    border-radius: 15px;
+                    color: white;
+                    padding: 0.3rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lighter-blue;
+                    }
+                }
             }
 
             img {
@@ -126,26 +111,6 @@ div.main-content-wrapper {
             }
         }
 
-        .swiper {
-            width: inherit;
-            height: 40vh;
-            box-shadow: 0 2px 5px 0 #00000085;
-
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .swiper-slide img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+        @import "components/swiper";
     }
 }

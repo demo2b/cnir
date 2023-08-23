@@ -12,12 +12,12 @@ body {
     width: 100%;
     margin: 0;
     background-color: $light-grey;
-
 }
 
 h1 { font-size: 4.4rem; letter-spacing: 0.1rem; font-family: $text-regular; }
 h2 { font-size: 3rem; letter-spacing: 0.1rem; font-family: $text-regular; }
 h3 { font-size: 2rem; letter-spacing: 0.1rem; font-family: $text-light; }
+h1,h2,h3,h4 { color: $text-color; }
 
 li { list-style: none; }
 
@@ -25,7 +25,5 @@ p { color: $text-color; }
 
 a {
     text-decoration: none;
-    &:hover {
-        color: $regular-blue;
-    }
+    &:hover { text-decoration: underline; }
 }
