@@ -32,7 +32,6 @@
 
 html * {
   font-family: "Yanone Kaffeesatz Light";
-  color: #4b4b4b;
   font-size: 1.4rem; }
 
 html,
@@ -60,6 +59,9 @@ h3 {
 
 li {
   list-style: none; }
+
+p {
+  color: #4b4b4b; }
 
 a {
   text-decoration: none; }
@@ -124,7 +126,8 @@ div.main-content-wrapper {
       border: 1px solid #0000002e; }
     div.main-content-wrapper div.main-content .grid-container {
       display: grid;
-      grid-template-columns: 100%; }
+      grid-template-columns: 100%;
+      grid-auto-rows: 1fr; }
     @media screen and (min-width: 951px) {
       div.main-content-wrapper div.main-content .grid-container-2 {
         grid-template-columns: 50% 50%; } }
@@ -136,16 +139,23 @@ div.main-content-wrapper {
         grid-template-columns: 25% 25% 25% 25%; } }
     div.main-content-wrapper div.main-content .editorial-card {
       padding: 1rem; }
-      div.main-content-wrapper div.main-content .editorial-card h2, div.main-content-wrapper div.main-content .editorial-card h3 {
+      div.main-content-wrapper div.main-content .editorial-card hgroup {
         background-color: #1f2357;
         color: white;
-        padding: 0.5rem;
-        margin-bottom: 0;
-        border-radius: 8px 8px 0 0; }
+        border-radius: 8px 8px 0 0;
+        padding: 0.5rem; }
+        div.main-content-wrapper div.main-content .editorial-card hgroup h2, div.main-content-wrapper div.main-content .editorial-card hgroup h3 {
+          margin: 0;
+          line-height: 3.5rem; }
+        div.main-content-wrapper div.main-content .editorial-card hgroup p {
+          color: white;
+          margin: 0 0 .3rem; }
       div.main-content-wrapper div.main-content .editorial-card .swiper {
         height: 12rem; }
       div.main-content-wrapper div.main-content .editorial-card .list {
-        text-align: left; }
+        text-align: left;
+        margin: 0;
+        border: 1px solid #1f2357; }
         div.main-content-wrapper div.main-content .editorial-card .list li {
           list-style: circle; }
       div.main-content-wrapper div.main-content .editorial-card img {
