@@ -5,7 +5,9 @@
  */
 const port = 80
 
-const express = require('express')
+const https = require("https");
+const express = require('express');
+const fs = require('fs');
 const { engine } = require('express-handlebars');
 const app = express()
 
@@ -20,6 +22,12 @@ app.set('views', './src/main/views');
 app.use(express.static('./src/main/statics'));
 require('./routes/routes')(app);
 
-app.listen(port, () => {
-    console.log(`CNIR app listening on port ${port}`)
-})
+https
+    .createServer(
+        {
+            key: fs.readFileSync("key.pem"),
+            cert: fs.readFileSync("cert.pem"),
+        },app)
+    .listen(port, () => {
+        console.log(`CNIR app listening on port ${port}`)
+    });
