@@ -3,7 +3,7 @@
  * @author Jonas.Fournel
  * @fileOverview
  */
-const port = 3000
+const port = 80
 
 const express = require('express')
 const { engine } = require('express-handlebars');
