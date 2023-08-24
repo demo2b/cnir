@@ -1,34 +1,18 @@
 @font-face {
   font-family: "Yanone Kaffeesatz Regular";
-  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Bold";
-  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Light";
-  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Thin";
-  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
-
-@font-face {
-  font-family: "Yanone Kaffeesatz Regular";
-  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
-
-@font-face {
-  font-family: "Yanone Kaffeesatz Bold";
-  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
-
-@font-face {
-  font-family: "Yanone Kaffeesatz Light";
-  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
-
-@font-face {
-  font-family: "Yanone Kaffeesatz Thin";
-  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
 
 html * {
   font-family: "Yanone Kaffeesatz Light";
@@ -73,22 +57,47 @@ a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+        display: none; }
+      header nav > ul.desktop {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        column-gap: 2rem; }
+        header nav > ul.desktop a {
+          color: white; } }
+  letter-spacing: 0.1rem;
+  font-family: "Yanone Kaffeesatz Light"; }
+
+h1, h2, h3, h4 {
+  color: #4b4b4b; }
+
+li {
+  list-style: none; }
+
+p {
+  color: #4b4b4b; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Regular";
-  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Bold";
-  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Light";
-  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
 
 @font-face {
   font-family: "Yanone Kaffeesatz Thin";
-  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
+  src: url("./fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
 
 header {
   display: flex;
