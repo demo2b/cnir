@@ -7,6 +7,44 @@
 div.main-content-wrapper {
     height: inherit;
 
+    div.mobile-menu-content {
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 2;
+        transition: left 1s;
+        left: 0;
+
+        &.hidden { left: calc(100vw); }
+        @media screen and (max-width: 650px) {
+            display: flex;
+        }
+        @media screen and (min-width: 651px) {
+            display: none;
+        }
+
+        ul {
+            li {
+                list-style-type: '>';
+
+                &::marker {
+                    margin-right: 1rem;
+                    font-size: 2.8rem;
+                }
+
+                a {
+                    margin-left: 2rem;
+                    color: $text-color;
+                    font-size: 2.8rem;
+                    line-height: 5rem;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
     div.main-content {
         height: auto;
 
@@ -41,10 +79,11 @@ div.main-content-wrapper {
                 flex-direction: column;
                 border-radius: 0 0 8px 8px;
                 flex: 2;
-                padding: 2rem 1rem 0 1rem;
+                padding: 1rem 1rem 0 1rem;
 
                 table {
                     text-align: center;
+                    margin-top: 1rem;
 
                     tbody {
                         background-color: $text-color;
@@ -111,7 +150,6 @@ div.main-content-wrapper {
 
             .list {
                 margin: 0;
-                border: 1px solid $regular-blue;
                 width: auto;
             }
 

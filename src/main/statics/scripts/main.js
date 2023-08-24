@@ -22,11 +22,7 @@ const swiperNoAutoplay = new Swiper(".swiper.no-auto-play", {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const options = {
-        type: 'multiple',
-    };
 
-    const calendar = new VanillaCalendar('#calendar', options);
-    calendar.init();
+document.querySelector('nav > button').addEventListener('click', () => {
+    document.querySelector('div.mobile-menu-content').classList.toggle('hidden');
 });

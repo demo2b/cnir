@@ -3,6 +3,10 @@
 html * {
     font-family: $text-light;
     font-size: 1.4rem;
+
+    .material-icons {
+        font-family: 'Material Icons', serif;
+    }
 }
 
 html,
