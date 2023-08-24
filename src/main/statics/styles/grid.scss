@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: 1fr;
+
+    .swiper {
+        width: 100%;
+    }
 }
 
 .grid-container-2 {

@@ -23,6 +23,7 @@
         <hr />
     </diV>
 
+    <!-- STAGES -->
     <div class="centered">
         <hgroup>
             <h2>Les Stages Ecole Française de Voile</h2>
@@ -47,8 +48,8 @@
                         <tbody>
                             <tr>
                                 <td>1 Cour</td>
-                                <td>2 Cours</td>
                                 <td>3 Cours</td>
+                                <td>6 Cours</td>
                             </tr>
                             <tr>
                                 <td>60€/personne</td>
@@ -98,8 +99,8 @@
                         <tbody>
                         <tr>
                             <td>1 Cour</td>
-                            <td>2 Cours</td>
                             <td>3 Cours</td>
+                            <td>6 Cours</td>
                         </tr>
                         <tr>
                             <td>45€/personne</td>
@@ -148,8 +149,8 @@
                         <tbody>
                         <tr>
                             <td>1 Cour</td>
-                            <td>2 Cours</td>
                             <td>3 Cours</td>
+                            <td>6 Cours</td>
                         </tr>
                         <tr>
                             <td>45€/personne</td>
@@ -198,8 +199,8 @@
                         <tbody>
                         <tr>
                             <td>1 Cour</td>
-                            <td>2 Cours</td>
                             <td>3 Cours</td>
+                            <td>6 Cours</td>
                         </tr>
                         <tr>
                             <td>45€/personne</td>
@@ -244,12 +245,12 @@
                 </div>
                 <div class="list">
                     <table>
-                        <thead><tr><th colspan="3">Cours collectifs du <u>lundi au samedi</u> de 09h00 à 10h00</u></th></tr></thead>
+                        <thead><tr><th colspan="3">Cours collectifs du <u>lundi au samedi</u> de <u>09h00 à 10h00</u></th></tr></thead>
                         <tbody>
                         <tr>
                             <td>1 Cour</td>
-                            <td>2 Cours</td>
                             <td>3 Cours</td>
+                            <td>6 Cours</td>
                         </tr>
                         <tr>
                             <td>35€/personne</td>
@@ -279,8 +280,8 @@
                         <tbody>
                         <tr>
                             <td>1 Cour</td>
-                            <td>2 Cours</td>
                             <td>3 Cours</td>
+                            <td>6 Cours</td>
                         </tr>
                         <tr>
                             <td>70€/personne</td>
@@ -315,6 +316,7 @@
     </div>
     <hr />
 
+    <!-- LOCATIONS -->
     <div class="centered">
         <hgroup class="centered">
             <h2>Locations supports Nautiques</h2>
@@ -442,14 +444,86 @@
     </div>
     <hr />
 
+    <!-- HABITABLE -->
     <div class="centered">
         <hgroup class="centered">
             <h2>Voile Habitable</h2>
-            <p>Découverte du littoral, formation sur voilier habitable</p>
+            <p>Découvrez ou perfectionnez vous à la navigation en voilier habitable.</p>
         </hgroup>
+        <div class="flex-container fle-container-vertical">
+            <div class="swiper no-auto-play">
+                <div class="swiper-wrapper">
+                    {{#times 9}}
+                        <div class="swiper-slide"><img loading="lazy" src="/images/habitable/{{this}}.webp"></div>
+                    {{/times}}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <hgroup>
+                <h3>Embarquez avec nous</h3>
+            </hgroup>
+            <p>La pédagogie FFVvoile vous permettra d’apprendre à votre rythme et quelque soit votre niveau.</p>
+            <p>Vivez des moments inoubliables, seul en famille ou entre amis au coeur de la Balagne, du désert des Agriates à la baie de Calvi.</p>
+            <p>Votre moniteur diplômé vous accueille à bord et vous supervise  à distance dans une ambiance chaleureuse et instructive.</p>
+            <div class="list">
+                <table>
+                    <thead><tr><th colspan="2">Découverte ou perfectionnement</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>1/2 Journée</td>
+                        <td>Journée</td>
+                    </tr>
+                    <tr>
+                        <td>60€ - 12ans</td>
+                        <td>90€ - 12ans</td>
+                    </tr>
+                    <tr>
+                        <td>80€ + 12ans</td>
+                        <td>120€ + 12ans</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button">Réserver</button>
+                <table>
+                    <thead>
+                        <tr><th colspan="2">Sortie Privative</th></tr>
+                        <tr><th colspan="2">Composez votre programme avec l’aide de votre skipper. (9 places)</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1/2 Journée</td>
+                        <td>Journée</td>
+                    </tr>
+                    <tr>
+                        <td>450€</td>
+                        <td>800€</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button">Réserver</button>
+                <table>
+                    <thead>
+                        <tr><th colspan="1">Coucher de soleil</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Sortie Privative (2h)</td>
+                    </tr>
+                    <tr>
+                        <td>350€ le bateau</td>
+                    </tr>
+                    <tr>
+                        <td>ou 50€ / personne</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button">Réserver</button>
+            </div>
+        </div>
     </div>
     <hr />
 
+    <!-- AUTRES ACTIVITÉS -->
     <div class="centered">
         <hgroup class="centered">
             <h2>Nos Autres Activités</h2>

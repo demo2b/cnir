@@ -71,13 +71,33 @@ a {
   a:hover {
     text-decoration: underline; }
 
+@font-face {
+  font-family: "Yanone Kaffeesatz Regular";
+  src: url("/images/fonts/YanoneKaffeesatz-Regular.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Bold";
+  src: url("/images/fonts/YanoneKaffeesatz-Bold.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Light";
+  src: url("/images/fonts/YanoneKaffeesatz-Light.ttf") format("ttf"); }
+
+@font-face {
+  font-family: "Yanone Kaffeesatz Thin";
+  src: url("/images/fonts/YanoneKaffeesatz-ExtraLight.ttf") format("ttf"); }
+
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  header h1 {
-    text-align: center; }
+  header a {
+    text-decoration: none; }
+    header a:hover {
+      text-decoration: none; }
+    header a h1 {
+      text-align: center; }
   header nav {
     width: 100%;
     background-color: #1f2357;
@@ -132,6 +152,8 @@ div.main-content-wrapper {
       display: grid;
       grid-template-columns: 100%;
       grid-auto-rows: 1fr; }
+      div.main-content-wrapper div.main-content .grid-container .swiper {
+        width: 100%; }
     @media screen and (min-width: 951px) {
       div.main-content-wrapper div.main-content .grid-container-2 {
         grid-template-columns: 50% 50%; } }
@@ -144,6 +166,43 @@ div.main-content-wrapper {
     @media screen and (min-width: 951px) {
       div.main-content-wrapper div.main-content .grid-container-4 {
         grid-template-columns: 25% 25% 25% 25%; } }
+    div.main-content-wrapper div.main-content .list {
+      text-align: left;
+      width: 40%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0 0 8px 8px;
+      flex: 2;
+      padding: 2rem 1rem 0 1rem; }
+      div.main-content-wrapper div.main-content .list table {
+        text-align: center; }
+        div.main-content-wrapper div.main-content .list table tbody {
+          background-color: #4b4b4b;
+          color: white; }
+          div.main-content-wrapper div.main-content .list table tbody:before {
+            content: "@";
+            display: block;
+            line-height: 10px;
+            text-indent: -99999px;
+            background-color: white; }
+          div.main-content-wrapper div.main-content .list table tbody tr:first-child {
+            background-color: #1f2357; }
+      div.main-content-wrapper div.main-content .list button {
+        width: 30%;
+        margin: 2rem auto 2rem auto;
+        background-color: #1f2357;
+        border: 1px solid grey;
+        border-radius: 15px;
+        color: white;
+        padding: 0.3rem;
+        cursor: pointer; }
+        div.main-content-wrapper div.main-content .list button:hover {
+          background-color: #292b5b; }
+      div.main-content-wrapper div.main-content .list ul {
+        flex: 2; }
+        div.main-content-wrapper div.main-content .list ul li {
+          list-style: circle; }
     div.main-content-wrapper div.main-content .editorial-card {
       padding: 1rem;
       display: flex;
@@ -164,8 +223,8 @@ div.main-content-wrapper {
         width: 100%; }
       div.main-content-wrapper div.main-content .editorial-card .list {
         text-align: left;
-        margin: 0;
-        border: 1px solid #1f2357;
+        width: 40%;
+        margin: auto;
         display: flex;
         flex-direction: column;
         border-radius: 0 0 8px 8px;
@@ -174,7 +233,7 @@ div.main-content-wrapper {
         div.main-content-wrapper div.main-content .editorial-card .list table {
           text-align: center; }
           div.main-content-wrapper div.main-content .editorial-card .list table tbody {
-            background-color: #1f2357;
+            background-color: #4b4b4b;
             color: white; }
             div.main-content-wrapper div.main-content .editorial-card .list table tbody:before {
               content: "@";
@@ -182,12 +241,8 @@ div.main-content-wrapper {
               line-height: 10px;
               text-indent: -99999px;
               background-color: white; }
-            div.main-content-wrapper div.main-content .editorial-card .list table tbody tr:last-child {
-              background-color: #4b4b4b; }
-        div.main-content-wrapper div.main-content .editorial-card .list ul {
-          flex: 2; }
-          div.main-content-wrapper div.main-content .editorial-card .list ul li {
-            list-style: circle; }
+            div.main-content-wrapper div.main-content .editorial-card .list table tbody tr:first-child {
+              background-color: #1f2357; }
         div.main-content-wrapper div.main-content .editorial-card .list button {
           width: 30%;
           margin: 2rem auto 2rem auto;
@@ -199,6 +254,14 @@ div.main-content-wrapper {
           cursor: pointer; }
           div.main-content-wrapper div.main-content .editorial-card .list button:hover {
             background-color: #292b5b; }
+        div.main-content-wrapper div.main-content .editorial-card .list ul {
+          flex: 2; }
+          div.main-content-wrapper div.main-content .editorial-card .list ul li {
+            list-style: circle; }
+      div.main-content-wrapper div.main-content .editorial-card .list {
+        margin: 0;
+        border: 1px solid #1f2357;
+        width: auto; }
       div.main-content-wrapper div.main-content .editorial-card img {
         display: block;
         height: 20rem;

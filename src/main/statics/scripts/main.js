@@ -21,3 +21,12 @@ const swiperNoAutoplay = new Swiper(".swiper.no-auto-play", {
         dynamicBullets: true,
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        type: 'multiple',
+    };
+
+    const calendar = new VanillaCalendar('#calendar', options);
+    calendar.init();
+});

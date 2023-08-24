@@ -9,7 +9,7 @@
         "url": "https://github.com/demo2b/cnir.git"
     },
     "scripts": {
-        "start": "npm run scss & node ./src/main/server/index.js",
+        "start": "node ./src/main/server/index.js",
         "scss": "node-sass --include-path sass src/main/statics/styles/main.scss -w src/main/statics/styles/main.css"
     },
     "license": "ISC",

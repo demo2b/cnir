@@ -6,10 +6,13 @@ const port = 3000
 
 const express = require('express')
 const { engine } = require('express-handlebars');
-
 const app = express()
 
-app.engine('.hbs', engine({extname: '.hbs'}));
+app.engine('.hbs', engine({
+    extname: '.hbs',
+    helpers: require('./handlebars-helpers/helpers')
+}));
+
 app.set('view engine', '.hbs');
 app.set('views', './src/main/views');
 

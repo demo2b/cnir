@@ -1,0 +1,10 @@
+.fle-container {
+    display: flex;
+
+    &.vertical { flex-direction: column; }
+    &.horiztonal { flex-direction: row; }
+
+    .swiper {
+        width: 100%;
+    }
+}
