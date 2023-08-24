@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "node ./src/main/server/index.js",
-        "scss": "node-sass --include-path sass src/main/statics/styles/main.scss -w src/main/statics/styles/main.css"
+        "scss": "node-sass --include-path sass src/main/statics/styles/main.scss src/main/statics/styles/main.css"
     },
     "license": "ISC",
     "devDependencies": {
