@@ -16,6 +16,7 @@ body {
     width: 100%;
     margin: 0;
     background-color: $light-grey;
+    overflow-x: hidden;
 }
 
 h1 { font-size: 4.4rem; letter-spacing: 0.1rem; font-family: $text-regular; }

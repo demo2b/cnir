@@ -81,16 +81,20 @@ div.main-content-wrapper {
                 flex: 2;
                 padding: 1rem 1rem 0 1rem;
 
-                @media screen and (max-width: 650px) {
-                    padding: 0;
-                }
-                @media screen and (min-width: 651px) {
-                    padding: 1rem 1rem 0 1rem;
-                }
-
                 table {
                     text-align: center;
                     margin-top: 1rem;
+
+                    @media screen and (max-width: 650px) {
+                        display: flex;
+                        flex-direction: column;
+
+                        tr {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                        }
+                    }
 
                     tbody {
                         background-color: $text-color;

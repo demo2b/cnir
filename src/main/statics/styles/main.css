@@ -42,7 +42,8 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  overflow-x: hidden; }
 
 h1 {
   font-size: 4.4rem;
@@ -218,15 +219,17 @@ div.main-content-wrapper {
       border-radius: 0 0 8px 8px;
       flex: 2;
       padding: 1rem 1rem 0 1rem; }
-      @media screen and (max-width: 650px) {
-        div.main-content-wrapper div.main-content .list {
-          padding: 0; } }
-      @media screen and (min-width: 651px) {
-        div.main-content-wrapper div.main-content .list {
-          padding: 1rem 1rem 0 1rem; } }
       div.main-content-wrapper div.main-content .list table {
         text-align: center;
         margin-top: 1rem; }
+        @media screen and (max-width: 650px) {
+          div.main-content-wrapper div.main-content .list table {
+            display: flex;
+            flex-direction: column; }
+            div.main-content-wrapper div.main-content .list table tr {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around; } }
         div.main-content-wrapper div.main-content .list table tbody {
           background-color: #4b4b4b;
           color: white; }
@@ -280,15 +283,17 @@ div.main-content-wrapper {
         border-radius: 0 0 8px 8px;
         flex: 2;
         padding: 1rem 1rem 0 1rem; }
-        @media screen and (max-width: 650px) {
-          div.main-content-wrapper div.main-content .editorial-card .list {
-            padding: 0; } }
-        @media screen and (min-width: 651px) {
-          div.main-content-wrapper div.main-content .editorial-card .list {
-            padding: 1rem 1rem 0 1rem; } }
         div.main-content-wrapper div.main-content .editorial-card .list table {
           text-align: center;
           margin-top: 1rem; }
+          @media screen and (max-width: 650px) {
+            div.main-content-wrapper div.main-content .editorial-card .list table {
+              display: flex;
+              flex-direction: column; }
+              div.main-content-wrapper div.main-content .editorial-card .list table tr {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around; } }
           div.main-content-wrapper div.main-content .editorial-card .list table tbody {
             background-color: #4b4b4b;
             color: white; }
