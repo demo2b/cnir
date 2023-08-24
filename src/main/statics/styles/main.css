@@ -147,6 +147,9 @@ footer {
 
 div.main-content-wrapper {
   height: inherit; }
+  div.main-content-wrapper #map {
+    width: 100%;
+    height: 40vh; }
   div.main-content-wrapper div.mobile-menu-content {
     background-color: white;
     width: 100vw;

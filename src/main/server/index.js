@@ -19,6 +19,7 @@ https
     .listen(port, () => {
         console.log(`CNIR app listening on port ${port}`)
     });
+app.listen(80);
 
 app.engine('.hbs', engine({
     extname: '.hbs',
@@ -30,7 +31,3 @@ app.set('views', './src/main/views');
 
 app.use(express.static('./src/main/statics'));
 require('./routes/routes')(app);
-
-// app.listen(port, () => {
-//     console.log(`CNIR app listening on port ${port}`)
-// })
