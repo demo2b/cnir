@@ -3,6 +3,10 @@
     grid-template-columns: 100%;
     grid-auto-rows: 1fr;
 
+    &.no-auto-row {
+        grid-auto-rows:unset;
+    }
+
     .swiper {
         width: 100%;
     }
