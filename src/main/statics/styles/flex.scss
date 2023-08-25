@@ -1,8 +1,8 @@
-.fle-container {
+.flex-container {
     display: flex;
 
     &.vertical { flex-direction: column; }
-    &.horiztonal { flex-direction: row; }
+    &.horizontal { flex-direction: row; }
 
     .swiper {
         width: 100%;

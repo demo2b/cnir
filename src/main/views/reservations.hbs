@@ -1,17 +1,45 @@
-<div class="full-width-container">
-    <div class="swiper auto-play">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/images/slider-heading/1.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/2.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/3.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/4.jpg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/5.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/6.jpg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/7.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/8.jpg"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
+<script src="/scripts/views/reservations/reservations.js" defer></script>
+
 <div class="container">
+    <hgroup class="centered">
+        <h1>Reservation</h1>
+        <p>Si vous souhaitez réserver une activité, utilisez le formulaire ci-dessous afin de valider votre choix</p>
+    </hgroup>
+    <hr />
+
+    <div class="flex-container vertical">
+        <form>
+            <div class="button-group" id="support-type">
+                <input type="button" value="Catamaran Hobie-Cat 15">
+                <input type="button" value="Planche à voile">
+                <input type="button" value="Catamaran New-Cat 12">
+                <input type="button" value="Funboat">
+                <input type="button" value="Optimist">
+                <input type="button" value="Club Pirate">
+                <input type="button" value="Wing Foil">
+                <input type="button" value="Voile Habitable">
+            </div>
+            <div class="button-group hidden" id="booking-type">
+                <input type="button" value="Stages">
+                <input type="button" value="Location">
+            </div>
+
+            <div class="button-group hidden" id="stage-type">
+                <input type="button" value="Cour Collectif">
+                <input type="button" value="Cour Particulier">
+            </div>
+
+            <div class="button-group hidden" id="stage-duration">
+                <input type="button" value="1 Cour">
+                <input type="button" value="3 Cours">
+                <input type="button" value="6 Cours">
+            </div>
+
+            <div class="button-group hidden" id="rent-duration">
+                <input type="button" value="1 heure">
+                <input type="button" value="2 heures">
+                <input type="button" value="3 heures">
+            </div>
+        </form>
+    </div>
 </div>

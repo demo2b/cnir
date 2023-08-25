@@ -9,7 +9,8 @@ div.main-content-wrapper {
 
     #map {
         width: 100%;
-        height: 40vh;
+        height: 50vh;
+
     }
 
     div.mobile-menu-content {
@@ -74,11 +75,45 @@ div.main-content-wrapper {
         }
 
         @import "grid";
+        @import "flex";
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            transition: opacity .5s;
+
+            &.hidden { opacity: 0; }
+        }
+
+        button,input[type=button] {
+            width: 30%;
+            margin: 2rem auto 2rem auto;
+            background-color: $regular-blue;
+            border: 1px solid grey;
+            border-radius: 15px;
+            color: white;
+            padding: 0.3rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $lighter-blue;
+            }
+
+            &:disabled,&.disabled {
+                background-color: $text-color;
+                opacity: .6;
+            }
+        }
 
         @mixin table-with-button {
             .list {
                 text-align: left;
-                width: 40%;
+                width: 60%;
+
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+
                 margin: auto;
                 display: flex;
                 flex-direction: column;
@@ -119,7 +154,7 @@ div.main-content-wrapper {
                     }
                 }
 
-                button {
+                a {
                     width: 30%;
                     margin: 2rem auto 2rem auto;
                     background-color: $regular-blue;
@@ -128,10 +163,7 @@ div.main-content-wrapper {
                     color: white;
                     padding: 0.3rem;
                     cursor: pointer;
-
-                    &:hover {
-                        background-color: $lighter-blue;
-                    }
+                    text-align: center;
                 }
 
                 ul {
