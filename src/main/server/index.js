@@ -11,6 +11,8 @@ const { engine } = require('express-handlebars');
 const httpsPort = 443;
 const httpPort = 80;
 
+const mySQLPool = require('./db/my-sql-init')();
+
 const app = express();
 // Creating Server on port 443 with HTTPS
 https.createServer({
@@ -39,7 +41,10 @@ app.set('view engine', '.hbs');
 // Defining view folder for dynamic rendering
 app.set('views', './src/main/server/views');
 // Defining public static folders for public files as images, fonts, etc..
-app.use(express.static('./src/main/public/statics'));
+app.use(express.static('./src/main/public/statics', {
+    maxAge : 3600 * 1000
+}));
 
 // Adding HTML routes into our application
-require('./routes/routes')(app);
+require('./routes/routes')(app, mySQLPool);
+

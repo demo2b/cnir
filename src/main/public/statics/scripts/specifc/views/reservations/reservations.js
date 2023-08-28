@@ -2,49 +2,77 @@
  * @author Jonas.Fournel
  * @fileOverview
  */
+import {XHRPromisifiedRequest} from "../../../common/helpers/xhr-promisified-request";
+import './reservations.scss';
+import EquipmentBean from "./beans/equipment-bean";
 
-const urlParams = new URLSearchParams(window.location.search);
-const typeParam = urlParams.get('type');
-const bookingTypeParam = urlParams.get('bookingType');
+const selectFormTemplate = `
+    <fieldset id="{{name}}">
+        <label for="{{name}}-select">{{label}}</label>
+        <select name="{{name}}" id="{{name}}-select">
+            {{#each items}}
+                <option value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </fieldset>
+`;
 
-const supportType = document.getElementById("support-type");
-const bookingType = document.getElementById("booking-type");
-const stageType = document.getElementById("stage-type");
+const reservationForm = document.getElementById('reservation-form');
 
-supportType.querySelectorAll("input").forEach((element) => {
-    element.addEventListener("click", (event) => {
-        supportType.querySelectorAll("input").forEach((otherElement) => {
-            otherElement.classList.add("disabled");
-        })
-        element.classList.remove("disabled");
-        bookingType.classList.remove("hidden");
-    })
-});
+let equipmentSelect;
+let activitySelect;
 
-bookingType.querySelectorAll("input").forEach((element) => {
-    element.addEventListener("click", (event) => {
-        bookingType.querySelectorAll("input").forEach((otherElement) => {
-            otherElement.classList.add("disabled");
-        })
-        element.classList.remove("disabled");
-        stageType.classList.remove("hidden");
-    })
-});
+/**
+ * @type {[EquipmentBean]}
+ */
+const equipmentList = [];
 
-stageType.querySelectorAll("input").forEach((element) => {
-    element.addEventListener("click", (event) => {
-        stageType.querySelectorAll("input").forEach((otherElement) => {
-            otherElement.classList.add("disabled");
-        })
-        element.classList.remove("disabled");
-        stageType.classList.remove("hidden");
-    })
-});
+/**
+ *
+ */
+function displayEquipmentList() {
+    new XHRPromisifiedRequest('/back-end/equipments', XHRPromisifiedRequest.HTTP_METHOD_GET)
+        .executeRequest()
+        .then((result) => {
+            const jsonResult = JSON.parse(result.responseText);
+            jsonResult.splice(0, 0, {id:0, name:''});
+            const template = Handlebars.compile(selectFormTemplate)({name:'equipment', label:'Selectionnez une activité', items: jsonResult});
+            reservationForm.insertAdjacentHTML('beforeend', template);
 
-if(typeParam) {
-    document.getElementById("support-type").querySelectorAll("input")[parseInt(typeParam)].dispatchEvent(new Event("click"));
+            equipmentSelect = document.getElementById("equipment-select")
+            jsonResult.forEach((result) => {equipmentList.push(new EquipmentBean(result));});
 
-    if(bookingType) {
-        document.getElementById("booking-type").querySelectorAll("input")[parseInt(bookingTypeParam)].dispatchEvent(new Event("click"));
+            equipmentSelect.addEventListener('change', (event) => {
+                if(activitySelect) { activitySelect.parentElement.remove(); }
+                if(parseInt(equipmentSelect.value) !== 0) {
+                    displayActivityTypeList(parseInt(equipmentSelect.value));
+                }
+            })
+        });
+
+    /**
+     * @param {number} selectedValue
+     */
+    function displayActivityTypeList(selectedValue) {
+        const selectedEquipment = equipmentList.find((el) => el.id === selectedValue);
+        if(selectedEquipment) {
+            const activities = [];
+            if(selectedEquipment.rentPrice1d > 0) { activities.push({id:'rent', name:'Location'}) }
+            if(selectedEquipment.stagePrice1d > 0) { activities.push({id:'stage', name:'Stages Collectifs'}) }
+            if(selectedEquipment.privatePrice1h > 0) { activities.push({id:'private', name:'Cours Particuliers'}) }
+            const template = Handlebars.compile(selectFormTemplate)({name:'activity-type', label:'Sélectionnez un type d\'activité', items: activities});
+            reservationForm.insertAdjacentHTML('beforeend', template);
+
+            activitySelect = document.getElementById("activity-type-select");
+        }
+    }
+
+    function displayActivityDurationList(selectedValue) {
+
     }
 }
+
+displayEquipmentList();
+
+
+

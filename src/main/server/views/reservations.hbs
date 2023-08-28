@@ -1,4 +1,5 @@
-<script src="/scripts/specific/views/reservations/reservations.js" defer></script>
+<script src="/scripts/specifc/views/reservations/reservations.bundle.js" defer></script>
+<link rel="stylesheet" href="/scripts/specifc/views/reservations/reservations.bundle.css">
 
 <div class="container">
     <hgroup class="centered">
@@ -7,39 +8,8 @@
     </hgroup>
     <hr />
 
-    <div class="flex-container vertical">
-        <form>
-            <div class="button-group" id="support-type">
-                <input type="button" value="Catamaran Hobie-Cat 15">
-                <input type="button" value="Planche à voile">
-                <input type="button" value="Catamaran New-Cat 12">
-                <input type="button" value="Funboat">
-                <input type="button" value="Optimist">
-                <input type="button" value="Club Pirate">
-                <input type="button" value="Wing Foil">
-                <input type="button" value="Voile Habitable">
-            </div>
-            <div class="button-group hidden" id="booking-type">
-                <input type="button" value="Stages">
-                <input type="button" value="Location">
-            </div>
-
-            <div class="button-group hidden" id="stage-type">
-                <input type="button" value="Cour Collectif">
-                <input type="button" value="Cour Particulier">
-            </div>
-
-            <div class="button-group hidden" id="stage-duration">
-                <input type="button" value="1 Cour">
-                <input type="button" value="3 Cours">
-                <input type="button" value="6 Cours">
-            </div>
-
-            <div class="button-group hidden" id="rent-duration">
-                <input type="button" value="1 heure">
-                <input type="button" value="2 heures">
-                <input type="button" value="3 heures">
-            </div>
+    <div class="flex-container vertical centered-item">
+        <form id="reservation-form">
         </form>
     </div>
 </div>

@@ -20,6 +20,9 @@
         "@rollup/plugin-commonjs": "^25.0.4",
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-terser": "^0.4.3",
+        "rollup": "^3.28.0",
+        "rollup-plugin-scss": "^4.0.0",
+        "rollup-watch": "^4.3.1",
         "express": "^4.18.2",
         "express-handlebars": "^7.1.2",
         "glob": "^10.3.3",
@@ -27,9 +30,8 @@
         "handlebars-i18next": "^1.0.3",
         "lit": "^2.8.0",
         "lit-i18n": "^3.0.2",
+        "mysql": "^2.18.1",
         "node-sass": "^9.0.0",
-        "npm-run-all": "^4.1.5",
-        "rollup": "^3.28.0",
-        "rollup-watch": "^4.3.1"
+        "npm-run-all": "^4.1.5"
     }
 }

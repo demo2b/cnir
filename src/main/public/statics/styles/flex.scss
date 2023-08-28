@@ -3,6 +3,7 @@
 
     &.vertical { flex-direction: column; }
     &.horizontal { flex-direction: row; }
+    &.centered-item { align-items: center; }
 
     .swiper {
         width: 100%;
