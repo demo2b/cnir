@@ -15,7 +15,6 @@ const selectFormTemplate = `
             {{/each}}
         </select>
     </fieldset>
-    
 `;
 const datePickerFormTemplate = `
     <fieldset id="{{name}}">
@@ -30,6 +29,7 @@ let equipmentSelect;
 let activitySelect;
 let durationSelect;
 let durationDatePickers = [];
+
 
 /**
  * @type {[EquipmentBean]}
