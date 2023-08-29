@@ -9,7 +9,7 @@
         "url": "https://github.com/demo2b/cnir.git"
     },
     "scripts": {
-        "start": "npm run scss && npm run rollup && node ./src/main/server/index.js",
+        "start": "npm run scss && npm run rollup && node ./src/main/server/index.js --inspect",
         "scss": "node-sass --include-path sass src/main/public/statics/styles/main.scss src/main/public/statics/styles/main.css",
         "scss:watch": "node-sass --include-path sass src/main/public/statics/styles/main.scss -w src/main/public/statics/styles/main.css",
         "rollup": "rollup -c",
@@ -20,18 +20,20 @@
         "@rollup/plugin-commonjs": "^25.0.4",
         "@rollup/plugin-node-resolve": "^15.1.0",
         "@rollup/plugin-terser": "^0.4.3",
-        "rollup": "^3.28.0",
-        "rollup-plugin-scss": "^4.0.0",
-        "rollup-watch": "^4.3.1",
         "express": "^4.18.2",
         "express-handlebars": "^7.1.2",
         "glob": "^10.3.3",
         "handlebars": "^4.7.8",
+        "handlebars-i18n": "^1.6.1",
         "handlebars-i18next": "^1.0.3",
+        "i18n": "^0.15.1",
         "lit": "^2.8.0",
         "lit-i18n": "^3.0.2",
         "mysql": "^2.18.1",
         "node-sass": "^9.0.0",
-        "npm-run-all": "^4.1.5"
+        "npm-run-all": "^4.1.5",
+        "rollup": "^3.28.0",
+        "rollup-plugin-scss": "^4.0.0",
+        "rollup-watch": "^4.3.1"
     }
 }

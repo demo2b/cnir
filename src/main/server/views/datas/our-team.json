@@ -1,0 +1,55 @@
+[
+    {
+        "name" : "Manoa ANCET - 10/02/2012",
+        "image" : "/images/our-team/manoa.webp",
+        "achievements" : ["Court en Optimist, IQ Foil et Flotte collective Multicoque"]
+    },
+    {
+        "name" : "Gabriel COMMES - 21/05/2013",
+        "image" : "/images/our-team/gabriel.webp",
+        "achievements" : ["Court en Optimist, Funboard et Flotte collective Multicoque"]
+    },
+    {
+        "name" : "Manoa ANCET - 10/02/2012",
+        "image" : "/images/our-team/manoa.webp",
+        "achievements" : ["Court en Optimist, IQ Foil et Flotte collective Multicoque"]
+    },
+    {
+        "name" : "Kalean ANCET - 22/10/2007",
+        "image" : "/images/our-team/Kalean.webp",
+        "achievements" : ["Court en IQFoil, Funboard, WingFoil et Flotte Collective Multicoques"]
+    },
+    {
+        "name" : "Nathan SALDUCCI - 21/04/2011",
+        "image" : "/images/our-team/nathan-léandre-anna.webp",
+        "achievements" : ["Court en Funboard et Flotte collective Multicoque"]
+    },
+    {
+        "name" : "Léandre MEYNADIER",
+        "image" : "/images/our-team/nathan-léandre-anna.webp",
+        "achievements" : ["Court en Funboard et Flotte collective Multicoques"]
+    },
+    {
+        "name" : "Anna TADDEI - 24/09/2010",
+        "image" : "/images/our-team/nathan-léandre-anna.webp",
+        "achievements" : ["Court en Funboard"]
+    },
+    {
+        "name" : "Eric VAILLANT",
+        "image" : "/images/our-team/eric.webp",
+        "achievements" : [
+            "5 titres de Champion de Corse Open Skiff, de 2009 à 2014",
+            "Vice-champion de Corse Laser  2016"
+        ]
+    },
+    {
+        "name" : "Maïna VERGON",
+        "image" : "/images/our-team/maina.webp",
+        "achievements" : ["Championne de Corse Funboard 2017"]
+    },
+    {
+        "name" : "Johanna VERGON",
+        "image" : "/images/our-team/johanna.webp",
+        "achievements" : ["Double Championne de Corse Funboard en 2015 et 2016"]
+    }
+]

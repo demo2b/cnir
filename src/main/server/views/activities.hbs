@@ -13,412 +13,104 @@
             <h2>Les Stages Ecole Française de Voile</h2>
             <p>Cours collectifs et cours particuliers en Optimist, Catamaran, Planche à voile, Wind foil et Wing foil.<br/>Pendant les vacances scolaires, les cours collectifs sont ouverts du lundi au samedi, et tout les mercredi et samedi après midi pendant le temps scolaire les cours particuliers sont organisés sur rendez-vous</p>
         </hgroup>
+
         <div class="grid-container grid-container-3">
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Catamaran Hobie-Cat 15</h3>
-                    <p>à partir de 14 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/hobbie-cat-15/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/hobbie-cat-15/2.jpeg"></div>
+            {{#each data.activities}}
+                <div class="editorial-card">
+                    <hgroup>
+                        <h3>{{this.name}}</h3>
+                        {{#if this.age}}
+                            <p>{{this.age}}</p>
+                        {{/if}}
+                    </hgroup>
+                    <div class="swiper no-auto-play">
+                        <div class="swiper-wrapper">
+                            {{#each this.images}}
+                                <div class="swiper-slide"><img loading="lazy" src="{{this}}"></div>
+                            {{/each}}
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours collectifs</th></tr>
-                            <tr><th colspan="3">du <u>lundi au samedi</u> de <u>10h00 à 11h30</u></th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1 Cour</td>
-                                <td>3 Cours</td>
-                                <td>6 Cours</td>
-                            </tr>
-                            <tr>
-                                <td>60€ / personne</td>
-                                <td>160€ / personne</td>
-                                <td>280€ / personne</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours Particulier du <u>lundi au samedi</u> sur <u>RDV</u></th></tr>
-                            <tr><th colspan="3">(deuxième persone +20€ par heure)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1h</td>
-                                <td>2h</td>
-                                <td>3h</td>
-                            </tr>
-                            <tr>
-                                <td>60€ / personne</td>
-                                <td>105€ / personne</td>
-                                <td>200€ / personne</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=0&bookingType=0">Réserver</a>
-                </div>
-            </div>
+                    <div class="list">
+                        {{#if this.stage_price_1}}
+                            <table>
+                                <thead>
+                                    <tr><th class="heading" colspan="3">{{@root.data.stage_label}}</th></tr>
+                                    <tr><th class="sub-heading" colspan="3">{{this.stageDateRange}}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="heading">
+                                        <td>{{@root.data.stage_price_1_label}}</td>
+                                        <td>{{@root.data.stage_price_3_label}}</td>
+                                        <td>{{@root.data.stage_price_6_label}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{this.stage_price_1}}{{@root.data.price_label}}</td>
+                                        <td>{{this.stage_price_3}}{{@root.data.price_label}}</td>
+                                        <td>{{this.stage_price_6}}{{@root.data.price_label}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        {{/if}}
 
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Planche à voile</h3>
-                    <p>à partir de 10 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/planche-a-voile/1.jpeg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/planche-a-voile/2.jpg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours collectifs</th></tr>
-                            <tr><th colspan="3">du <u>lundi au samedi</u> de <u>10h00 à 11h30</u></th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Cour</td>
-                            <td>3 Cours</td>
-                            <td>6 Cours</td>
-                        </tr>
-                        <tr>
-                            <td>45€ / personne</td>
-                            <td>120€ / personne</td>
-                            <td>220€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <thead>
-                        <tr><th colspan="3">Cours Particulier du <u>lundi au samedi</u> sur <u>RDV</u></th></tr>
-                        <tr><th colspan="3">(deuxième persone +20€ par heure)</th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1h</td>
-                            <td>2h</td>
-                            <td>3h</td>
-                        </tr>
-                        <tr>
-                            <td>60€ / personne</td>
-                            <td>105€ / personne</td>
-                            <td>200€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=1&bookingType=0">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Catamaran New-Cat 12 / Funboat</h3>
-                    <p>de 10 à 14 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/new-cat-12/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/new-cat-12/2.jpg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours collectifs</th></tr>
-                            <tr><th colspan="3">du <u>lundi au samedi</u> de <u>09h45 à 11h15</u> et de <u>16h15 à 17h45</u></th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Cour</td>
-                            <td>3 Cours</td>
-                            <td>6 Cours</td>
-                        </tr>
-                        <tr>
-                            <td>45€ / personne</td>
-                            <td>120€ / personne</td>
-                            <td>220€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <thead>
-                        <tr><th colspan="3">Cours Particulier du <u>lundi au samedi</u> sur <u>RDV</u></th></tr>
-                        <tr><th colspan="3">(deuxième persone +20€ par heure)</th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1h</td>
-                            <td>2h</td>
-                            <td>3h</td>
-                        </tr>
-                        <tr>
-                            <td>60€ / personne</td>
-                            <td>105€ / personne</td>
-                            <td>200€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=2&bookingType=0">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Optimist</h3>
-                    <p>de 7 à 11 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/optimist/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/optimist/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours collectifs</th></tr>
-                            <tr><th colspan="3">du <u>lundi au samedi</u> de <u>10h30 à 12h00</u> et de <u>16h30 à 18h00</u></th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Cour</td>
-                            <td>3 Cours</td>
-                            <td>6 Cours</td>
-                        </tr>
-                        <tr>
-                            <td>45€ / personne</td>
-                            <td>115€ / personne</td>
-                            <td>200€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <thead>
-                        <tr><th colspan="3">Cours Particulier du <u>lundi au samedi</u> sur <u>RDV</u></th></tr>
-                        <tr><th colspan="3">(deuxième persone +20€ par heure)</th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1h</td>
-                            <td>2h</td>
-                            <td>3h</td>
-                        </tr>
-                        <tr>
-                            <td>60€ / personne</td>
-                            <td>105€ / personne</td>
-                            <td>200€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=4&bookingType=0">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Club Pirate</h3>
-                    <p>de 5 à 7 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/optimist/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/optimist/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                            <tr><th colspan="3">Cours collectifs</th></tr>
-                            <tr><th colspan="3">du <u>lundi au samedi</u> de <u>09h00 à 10h00</u></th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Cour</td>
-                            <td>3 Cours</td>
-                            <td>6 Cours</td>
-                        </tr>
-                        <tr>
-                            <td>35€ / personne</td>
-                            <td>100€ / personne</td>
-                            <td>180€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=5&bookingType=0">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Wing Foil</h3>
-                    <p>à partir de 12 ans</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/images/wing-foil/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/wing-foil/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <table>
-                        <thead>
-                        <tr><th colspan="3">Cours Particulier du <u>lundi au samedi</u> sur <u>RDV</u></th></tr>
-                        <tr><th colspan="3">(deuxième persone +20€ par heure)</th></tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1h</td>
-                            <td>2h</td>
-                            <td>3h</td>
-                        </tr>
-                        <tr>
-                            <td>120€ / personne</td>
-                            <td>220€ / personne</td>
-                            <td>400€ / personne</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <a href="/reservations?type=6&bookingType=0">Réserver</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr />
+                        {{#if this.private_price_1}}
+                            <table>
+                                <thead>
+                                    <tr><th class="heading" colspan="3">{{@root.data.private_label}}</th></tr>
+                                    <tr><th class="sub-heading" colspan="3">{{this.privateDateRange}}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="heading">
+                                        <td>{{@root.data.private_price_1_label}}</td>
+                                        <td>{{@root.data.private_price_2_label}}</td>
+                                        <td>{{@root.data.private_price_4_label}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{this.private_price_1}}{{@root.data.price_label}}</td>
+                                        <td>{{this.private_price_2}}{{@root.data.price_label}}</td>
+                                        <td>{{this.private_price_4}}{{@root.data.price_label}}</td>
+                                </tbody>
+                            </table>
+                        {{/if}}
 
-    <!-- LOCATIONS -->
-    <div class="centered">
-        <hgroup class="centered">
-            <h2>Locations supports Nautiques</h2>
-            <p>Catamarans, Windsurf, Wing foil, Wind foil, Kayaks et Stand Up Paddle. Locations sous supervision sauf pour les kayaks et Stand UP Paddle Tous les jours de 9 h à 18 heures (il est préférable de réserver)</p>
-        </hgroup>
-        <div class="grid-container grid-container-3 no-auto-row">
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Kayak</h3>
-                    <p>Nos kayaks sont auto-videurs et très faciles d’accès</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/kayak/1.jpeg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/kayak/2.jpeg"></div>
+                        {{#if this.rent_price_1}}
+                            <table>
+                                <thead>
+                                    <tr><th class="heading" colspan="3">{{@root.data.rent_label}}</th></tr>
+                                    <tr><th class="sub-heading" colspan="3">{{this.privateDateRange}}</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="heading">
+                                        <td>{{@root.data.rent_price_1_label}}</td>
+                                        <td>{{@root.data.rent_price_2_label}}</td>
+                                        <td>{{@root.data.rent_price_3_label}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{this.rent_price_1}}{{@root.data.price_label}}</td>
+                                        <td>{{this.rent_price_2}}{{@root.data.price_label}}</td>
+                                        <td>{{this.rent_price_3}}{{@root.data.price_label}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {{#if this.rent_price_daily}}
+                            <table>
+                                <tbody>
+                                    <tr class="heading">
+                                        <td>{{@root.data.rent_price_daily_label}}</td>
+                                        <td>{{@root.data.rent_price_weekly_label}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{this.rent_price_daily}}{{@root.data.price_label}}</td>
+                                        <td>{{this.rent_price_weekly}}{{@root.data.price_label}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {{/if}}
+                        {{/if}}
+                        <a href="/reservations?type=0&bookingType=0">{{@root.data.book_label}}</a>
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="list">
-                    <ul>
-                        <li>4 kayaks monoplaces 14€ pour une 1 heure</li>
-                        <li>12 kayaks doubles ( 2 adultes + 1 enfant), 20€ pour une heure</li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Stand Up Paddle</h3>
-                    <p>Le Stand Up Paddle est le support tendance entre surf et kayak</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/kayak/1.jpeg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/kayak/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>6 SUP rigides ou gonflables, 15€ pour une heure </li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Fun-boat</h3>
-                    <p>Le funboat vous séduira par sa facilité d'utilisation et son contrôle dans le vent soutenu. 8 funboat, 3 personnes max (selon gabarit)</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/fun-boat/1.jpeg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/fun-boat/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>30€ pour une heure Location sur plan d'eau surveillé</li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Catamaran Hobbie-cat</h3>
-                    <p>5 Catamarans Hobie-cat. 15 Jusqu'à 4 personnes en fonction des conditions de navigation et du gabarit de l'équipage.</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/hobbie-cat-15/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/hobbie-cat-15/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>50 € pour une heure Location sur plan d'eau surveillé</li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Planche à voile, Funboard & Wind foil</h3>
-                    <p>Location sur plan d'eau surveillé</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/planche-a-voile/1.jpeg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/planche-a-voile/2.jpg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>Planches débutant : 20€ pour une heure</li>
-                        <li>Funboard : 30€ pour une heure</li>
-                        <li>Wind Foil : 50€ pour une heure</li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
-            <div class="editorial-card">
-                <hgroup>
-                    <h3>Location Wing foil</h3>
-                    <p>Location sur plan d'eau surveillé</p>
-                </hgroup>
-                <div class="swiper no-auto-play">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img loading="lazy" src="/images/wing-foil/1.jpg"></div>
-                        <div class="swiper-slide"><img loading="lazy" src="/images/wing-foil/2.jpeg"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>50€ pour une heure</li>
-                    </ul>
-                    <a href="/reservations">Réserver</a>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </div>
     <hr />
@@ -446,9 +138,11 @@
             <p>Votre moniteur diplômé vous accueille à bord et vous supervise  à distance dans une ambiance chaleureuse et instructive.</p>
             <div class="list">
                 <table>
-                    <thead><tr><th colspan="2">Découverte ou perfectionnement</th></tr></thead>
+                    <thead>
+                        <tr><th colspan="2">Découverte ou perfectionnement</th></tr>
+                    </thead>
                     <tbody>
-                    <tr>
+                    <tr class="heading">
                         <td>1/2 Journée</td>
                         <td>Journée</td>
                     </tr>
@@ -470,7 +164,7 @@
                         <tr><th colspan="2">Composez votre programme avec l’aide de votre skipper. (9 places)</th></tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr class="heading">
                         <td>1/2 Journée</td>
                         <td>Journée</td>
                     </tr>
@@ -486,7 +180,7 @@
                         <tr><th colspan="1">Coucher de soleil</th></tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr class="heading">
                         <td>Sortie Privative (2h)</td>
                     </tr>
                     <tr>

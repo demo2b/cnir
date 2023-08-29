@@ -1,0 +1,137 @@
+{
+    "stage_label" : "Cours collectifs",
+    "price_label" : "€ / personne",
+    "stage_price_1_label" : "1 cour",
+    "stage_price_3_label" : "3 Cours",
+    "stage_price_6_label" : "6 Cours",
+    "private_label" : "Cours Particulier",
+    "private_price_1_label" : "1h",
+    "private_price_2_label" : "2h",
+    "private_price_4_label" : "4h",
+    "rent_label" : "Location",
+    "rent_price_1_label" : "1h",
+    "rent_price_2_label" : "2h",
+    "rent_price_3_label" : "3h",
+    "rent_price_daily_label" : "Journée",
+    "rent_price_weekly_label" : "Semaine",
+    "book_label" : "Réserver",
+    "activities" : [
+        {
+            "id": 1,
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "Pour tous les âges",
+            "images": [
+                "/images/kayak/1.jpeg",
+                "/images/kayak/2.jpeg"
+            ]
+        },
+        {
+            "id": 2,
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "Pour tous les âges",
+            "images": [
+                "/images/kayak/1.jpeg",
+                "/images/kayak/2.jpeg"
+            ]
+        },
+        {
+            "id": 3,
+            "stageDateRange" : "Du lundi au samedi de 09h45 à 11h15 et de 16h15 à 17h45",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "de 10 à 14 ans",
+            "images": [
+                "/images/new-cat-12/1.jpg",
+                "/images/new-cat-12/2.jpg"
+            ]
+        },
+        {
+            "id": 4,
+            "stageDateRange" : "Du lundi au samedi de 10h00 à 11h30",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "à partir de 14 ans",
+            "images": [
+                "/images/hobbie-cat-15/1.jpg",
+                "/images/hobbie-cat-15/2.jpeg"
+            ]
+        },
+        {
+            "id": 5,
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "Pour tous les âges",
+            "images": [
+                "/images/kayak/1.jpeg",
+                "/images/kayak/2.jpeg"
+            ]
+        },
+        {
+            "id": 6,
+            "stageDateRange" : "Du lundi au samedi sur RDV",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "à partir de 12 ans",
+            "images": [
+                "/images/wing-foil/1.jpg",
+                "/images/wing-foil/2.jpeg"
+            ]
+        },
+        {
+            "id": 7,
+            "stageDateRange" : "Du lundi au samedi de 10h00 à 11h30",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "à partir de 10 ans",
+            "images": [
+                "/images/planche-a-voile/1.jpeg",
+                "/images/planche-a-voile/2.jpg"
+            ]
+        },
+        {
+            "id": 8,
+            "stageDateRange" : "Du lundi au samedi de 10h00 à 11h30",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "à partir de 10 ans",
+            "images": [
+                "/images/planche-a-voile/1.jpeg",
+                "/images/planche-a-voile/2.jpg"
+            ]
+        },
+        {
+            "id": 9,
+            "stageDateRange" : "Du lundi au samedi de 10h00 à 11h30",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "à partir de 10 ans",
+            "images": [
+                "/images/planche-a-voile/1.jpeg",
+                "/images/planche-a-voile/2.jpg"
+            ]
+        },
+        {
+            "id": 10,
+            "stageDateRange" : "Du lundi au samedi de 09h45 à 11h15 et de 16h15 à 17h45",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "de 10 à 14 ans",
+            "images": [
+                "/images/new-cat-12/1.jpg",
+                "/images/new-cat-12/2.jpg"
+            ]
+        },
+        {
+            "id": 11,
+            "stageDateRange" : "Du lundi au samedi de 10h30 à 12h00 et de 16h30 à 18h00",
+            "privateDateRange" : "Du lundi au samedi sur RDV",
+            "age" : "de 7 à 11 ans",
+            "images": [
+                "/images/optimist/1.jpg",
+                "/images/optimist/2.jpeg"
+            ]
+        },
+        {
+            "id": 12,
+            "stageDateRange" : "Du lundi au samedi de 09h00 à 10h00",
+            "privateDateRange" : "",
+            "age" : "de 5 à 7 ans",
+            "images": [
+                "/images/optimist/1.jpg",
+                "/images/optimist/2.jpeg"
+            ]
+        }
+    ]
+}

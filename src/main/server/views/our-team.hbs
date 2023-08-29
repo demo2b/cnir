@@ -1,86 +1,31 @@
 <div class="container">
     <hgroup class="centered">
-        <h1>Notre Équipe</h1>
+        <h1>{{i18n "view-our-team-title"}}</h1>
     </hgroup>
     <hr />
 
     <hgroup class="centered">
-        <h2>L'École de Sport</h2>
-        <p>L'école de sport est ouverte à tous ceux qui veulent pratiquer leur sport toute l'année, qu'ils ou elles aient une pratique compétitive, de loisir ou de bien être (sport santé).</p>
-        <p>Les entrainements et les séances ont lieu tous les samedi et mercredi après midi en période scolaires.</p>
-        <p>Pendant les vacances le club : intègre les membres de l'école de sport aux stages EFV en fonction des places disponibles,
-            propose des créneaux de navigation libre, forme sous condition de niveau et d'âge, ceux qui sont intéressés par les métiers du nautisme.</p>
-        <p>Licence club et cotisation annuelle à jour obligatoire : 100€ pour les adultes, 60€ pour les mineurs.
-            Carte de 10 sorties : 120€ pour les adultes, 100€ pour les mineurs</p>
-        <p>Fermeture annuelle : de mi décembre à fin février</p>
+        <h2>{{i18n "view-our-team-section-1-title"}}</h2>
+        <p>{{i18n "view-our-team-section-1-paragraph-1"}}</p>
+        <p>{{i18n "view-our-team-section-1-paragraph-2"}}</p>
+        <p>{{i18n "view-our-team-section-1-paragraph-3"}}</p>
+        <p>{{i18n "view-our-team-section-1-paragraph-4"}}</p>
+        <p>{{i18n "view-our-team-section-1-paragraph-5"}}</p>
     </hgroup>
     <hr />
 
     <hgroup class="centered">
-        <h2>L'Équipe Sportive</h2>
+        <h2>{{i18n "view-our-team-section-2-title"}}</h2>
         <div class="grid-container grid-container-4 no-auto-row">
-            <div class="editorial-card">
-                <h3>Manoa ANCET - 10/02/2012</h3>
-                <img src="/images/our-team/manoa.webp">
-                <p>Court en Optimist, IQ Foil et Flotte collective Multicoque</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Gabriel COMMES - 21/05/2013</h3>
-                <img src="/images/our-team/gabriel.webp">
-                <p>Court en Optimist, Funboard et Flotte collective Multicoque</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Kalean ANCET - 22/10/2007</h3>
-                <img src="/images/our-team/Kalean.webp">
-                <p>Court en IQFoil, Funboard, WingFoil et Flotte Collective Multicoques</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Nathan SALDUCCI - 21/04/2011</h3>
-                <img src="/images/our-team/nathan-léandre-anna.webp">
-                <p>Court en Funboard et Flotte collective Multicoque</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Léandre MEYNADIER</h3>
-                <img src="/images/our-team/nathan-léandre-anna.webp">
-                <p>Court en Funboard et Flotte collective Multicoques</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Anna TADDEI - 24/09/2010</h3>
-                <img src="/images/our-team/nathan-léandre-anna.webp">
-                <p>Court en Funboard</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Stella FAZI</h3>
-                <img src="/images/our-team/stella.webp">
-                <p>3 ème au championnat de France funboard en vague 2012</p>
-                <p>3 ème au championnat de France funboard en slalom 2012</p>
-                <p>Stella figure est une figure du windsurf insulaire.</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Baptiste MAMOURET - 23/01/1999</h3>
-                <img src="/images/our-team/baptiste.webp">
-                <p>Champion de France Open Skiff 2013</p>
-                <p>Vice-champion de Corse Open Bic 2013</p>
-                <p>3ème à la Normandie Cup Laser 2014</p>
-                <p>3ème au championnat de méditerranée 2015</p>
-                <p>Sélectionné aux championnats du monde laser 2017</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Eric VAILLANT</h3>
-                <img src="/images/our-team/eric.webp">
-                <p>5 titres de Champion de Corse Open Skiff, de 2009 à 2014</p>
-                <p>Vice-champion de Corse Laser  2016</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Maïna VERGON</h3>
-                <img src="/images/our-team/maina.webp">
-                <p>Championne de Corse Funboard 2017</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Johanna VERGON</h3>
-                <img src="/images/our-team/johanna.webp">
-                <p>Double Championne de Corse Funboard en 2015 et 2016</p>
-            </div>
+            {{#each data}}
+                <div class="editorial-card">
+                    <h3>{{this.name}}</h3>
+                    <img src="{{this.image}}">
+                    {{#each this.achievements}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/each}}
         </div>
     </hgroup>
     <hr />

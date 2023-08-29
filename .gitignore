@@ -1,4 +1,6 @@
 main.css
+*.bundle.js
+*.bundle.css
 
 # Logs
 logs
