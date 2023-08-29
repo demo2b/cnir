@@ -10,6 +10,7 @@ form {
         align-items: center;
 
         label { width: 30%; }
+
         select {
             width: 70%;
             padding: 1rem;
@@ -17,6 +18,13 @@ form {
             border: 1px solid #1f2357;
 
             option { line-height: 2rem; }
+        }
+
+        input[type=date] {
+            width: 69%;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #1f2357;
         }
     }
 

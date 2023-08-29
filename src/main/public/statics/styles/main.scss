@@ -6,6 +6,13 @@
 
 div.main-content-wrapper {
     height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header { flex-shrink: 1; }
+    .main-content { flex-grow: 1; }
+    footer { flex-shrink: 1; }
 
     #map {
         width: 100%;
