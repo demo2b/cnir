@@ -10,7 +10,7 @@ module.exports = function () {
         connectionLimit : 10,
         host     : 'localhost',
         user     : 'root',
-        password : '@IAmSuperDummy@',
+        password : '666@IAmSuperDummy@666',
         database : 'cnir'
     })
 
