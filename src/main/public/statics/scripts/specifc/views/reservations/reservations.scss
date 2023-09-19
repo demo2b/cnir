@@ -46,7 +46,7 @@ form {
             option { line-height: 2rem; }
         }
 
-        input[type=date] {
+        input[type=datetime-local],input[type=date] {
             width: 69%;
             padding: 1rem;
             border-radius: 8px;

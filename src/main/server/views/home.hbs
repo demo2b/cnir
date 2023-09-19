@@ -1,14 +1,16 @@
 <div class="full-width-container">
     <div class="swiper auto-play">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/images/slider-heading/1.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/2.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/3.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/4.jpg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/5.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/6.jpg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/7.jpeg"></div>
-            <div class="swiper-slide"><img loading="lazy" src="/images/slider-heading/8.jpg"></div>
+            {{#times 5}}
+                <div class="swiper-slide">
+                    <img src="/images/slider-heading/1500/{{this}}-1500.webp"
+                         srcset="/images/slider-heading/3000/{{this}}-3000.webp 3000w,
+                                 /images/slider-heading/1500/{{this}}-1500.webp 1500w,
+                                 /images/slider-heading/800/{{this}}-800.webp 800w"
+                         sizes="100vw"
+                         alt="">
+                </div>
+            {{/times}}
         </div>
         <div class="swiper-pagination"></div>
     </div>

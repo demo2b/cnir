@@ -8,6 +8,8 @@ const express = require('express');
 const fs = require('fs');
 const { engine } = require('express-handlebars');
 const i18n = require('i18n');
+const compression = require('compression');
+const cors = require('cors');
 
 const httpsPort = 443;
 const httpPort = 80;
@@ -54,7 +56,9 @@ app.use(express.static('./src/main/public/statics', {
     maxAge : 3600 * 1000
 }));
 // Defining i18n module
+app.use(cors());
 app.use(i18n.init);
+app.use(compression());
 
 // Adding HTML routes into our application
 require('./routes/routes')(app, mySQLPool);

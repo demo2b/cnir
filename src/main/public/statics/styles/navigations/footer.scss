@@ -13,5 +13,17 @@ footer {
         display: flex;
         align-items: center;
         column-gap: 2rem;
+
+        @media screen and (max-width: 1134px) {
+            img { display: none; }
+            p { color: white; }
+            li { height: 2.2rem; }
+
+            flex-direction: column;
+            padding: 0;
+        }
+        @media screen and (min-width: 1135px) {
+            p { display: none }
+        }
     }
 }

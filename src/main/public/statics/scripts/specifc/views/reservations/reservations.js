@@ -16,6 +16,12 @@ const selectFormTemplate = `
         </select>
     </fieldset>
 `;
+const datetimeLocalPickerFormTemplate = `
+    <fieldset id="{{name}}">
+        <label for="{{name}}-datetimelocal">{{label}}</label>
+        <input type="datetime-local" id="{{name}}-datetimelocal" name="{{name}}-datetimelocal" step="1800" />
+    </fieldset>
+`;
 const datePickerFormTemplate = `
     <fieldset id="{{name}}">
         <label for="{{name}}-date">{{label}}</label>
@@ -128,7 +134,7 @@ function displayEquipmentList() {
         if(selectedEquipment.rentPrice2h) items.push({id:'2h', name:'2 Heures'});
         if(selectedEquipment.rentPrice3h) items.push({id:'3h', name:'3 Heures'});
         if(selectedEquipment.rentPrice1d) items.push({id:'1d', name:'1 Journée'});
-        if(selectedEquipment.rentPrice6d) items.push({id:'6d', name:'6 Jours'});
+        if(selectedEquipment.rentPrice1w) items.push({id:'1w', name:'6 Jours'});
         const template = Handlebars.compile(selectFormTemplate)({name:'duration', label:'Sélectionnez la durée de la location', items: items});
         reservationForm.insertAdjacentHTML('beforeend', template);
         durationSelect = document.getElementById('duration-select');
@@ -144,7 +150,7 @@ function displayEquipmentList() {
 
     function displayDatePickers(selectedDuration) {
         let datePickerNumber = 1;
-        let selectLabel = 'Sélectionnez le jour de l\'activité';
+        let selectLabel = 'Sélectionnez le 1er jour de l\'activité';
         if(selectedDuration.includes('d')) {
             datePickerNumber = parseInt(selectedDuration.split('d')[0]);
             if(datePickerNumber > 1) selectLabel = `Sélectionnez le {0}e jour de l'activité`;

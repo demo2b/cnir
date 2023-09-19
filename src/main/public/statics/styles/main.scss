@@ -5,13 +5,13 @@
 @import "navigations/footer";
 
 div.main-content-wrapper {
-    height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: auto;
 
     header { flex-shrink: 1; }
-    .main-content { flex-grow: 1; }
+    .main-content { flex-grow: 1; min-height: 50vh }
     footer { flex-shrink: 1; }
 
     #map {
